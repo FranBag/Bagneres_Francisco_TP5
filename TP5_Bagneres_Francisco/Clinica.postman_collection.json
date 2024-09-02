@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "5818bc5a-44e8-4617-ae96-47370ad2e649",
+		"name": "Clinica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37463029"
+	},
+	"item": [
+		{
+			"name": "medico",
+			"item": [
+				{
+					"name": "mostrarme todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/medico/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar uno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/medico/:matricula",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico",
+								":matricula"
+							],
+							"variable": [
+								{
+									"key": "matricula",
+									"value": "774"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar especialidad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/medico/obtener/:especialidad",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico",
+								"obtener",
+								":especialidad"
+							],
+							"variable": [
+								{
+									"key": "especialidad",
+									"value": "Pediatría"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear medico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matricula\":881,\r\n    \"nombre\":\"Francisco\",\r\n    \"apellido\":\"Bagneres\",\r\n    \"especialidad\":\"jugar ligoleyen\",\r\n    \"observaciones\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/medico/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar medico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/medico/borrar?matricula=881",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico",
+								"borrar"
+							],
+							"query": [
+								{
+									"key": "matricula",
+									"value": "881"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar medico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matricula\":881,\r\n    \"nombre\":\"Franco\",\r\n    \"apellido\":\"Bagnoli\",\r\n    \"especialidad\":\"jugar tetris\",\r\n    \"observaciones\": \"es medio malo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/medico/modificar?matricula=881",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"medico",
+								"modificar"
+							],
+							"query": [
+								{
+									"key": "matricula",
+									"value": "881"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Request para el CRUD de médicos."
+		},
+		{
+			"name": "paciente",
+			"item": [
+				{
+					"name": "mostrarme todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/paciente/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar uno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/paciente/:nro_historial_clinico",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente",
+								":nro_historial_clinico"
+							],
+							"variable": [
+								{
+									"key": "nro_historial_clinico",
+									"value": "3212"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar nss",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/paciente/obtener/:nss",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente",
+								"obtener",
+								":nss"
+							],
+							"variable": [
+								{
+									"key": "nss",
+									"value": "12345678"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear paciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nro_historial_clinico\": 281004,\r\n        \"nss\": 12345678,\r\n        \"nombre\": \"Francisco\",\r\n        \"apellido\": \"Bagneres\",\r\n        \"domicilio\": \"tripoli y jauretche\",\r\n        \"codigo_postal\": 3300,\r\n        \"telefono\": \"3764-12345678\",\r\n        \"observaciones\": \"adicto al lol\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/paciente/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar paciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/paciente/borrar?nro_historial_clinico=281004",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente",
+								"borrar"
+							],
+							"query": [
+								{
+									"key": "nro_historial_clinico",
+									"value": "281004"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar paciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"nro_historial_clinico\": 281004,\r\n        \"nss\": 12345678,\r\n        \"nombre\": \"Franco\",\r\n        \"apellido\": \"Bro\",\r\n        \"domicilio\": \"nose\",\r\n        \"codigo_postal\": 3300,\r\n        \"telefono\": \"3764-12345678\",\r\n        \"observaciones\": \"adicto al tetris\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/paciente/modificar?nro_historial_clinico=281004",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"paciente",
+								"modificar"
+							],
+							"query": [
+								{
+									"key": "nro_historial_clinico",
+									"value": "281004"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Request para el CRUD de pacientes."
+		},
+		{
+			"name": "ingreso",
+			"item": [
+				{
+					"name": "mostrarme todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ingreso/",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ingreso",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar uno",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ingreso/:id_ingreso",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ingreso",
+								":id_ingreso"
+							],
+							"variable": [
+								{
+									"key": "id_ingreso",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar habitacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ingreso/obtener/:nro_habitacion",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ingreso",
+								"obtener",
+								":nro_habitacion"
+							],
+							"variable": [
+								{
+									"key": "nro_habitacion",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "crear ingreso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"id_ingreso\": 2810,\r\n    \"fecha_ingreso\": \"2004-10-28 03:00:00\",\r\n    \"nro_habitacion\": 1,\r\n    \"nro_cama\": 5,\r\n    \"observaciones\": \"Juega demaciado lol\",\r\n    \"nro_historial_paciente\": 281004,\r\n    \"matricula_medico\": 449\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/ingreso/crear",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ingreso",
+								"crear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar ingreso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/ingreso/borrar?id_ingreso=2810",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ingreso",
+								"borrar"
+							],
+							"query": [
+								{
+									"key": "id_ingreso",
+									"value": "2810"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificar ingreso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_ingreso\": 2810,\r\n    \"fecha_ingreso\": \"2003-06-27 05:00:00\",\r\n    \"nro_habitacion\": 2,\r\n    \"nro_cama\": 1,\r\n    \"observaciones\": \"Juega demaciado tetris\",\r\n    \"nro_historial_paciente\": 281004,\r\n    \"matricula_medico\": 881\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/ingreso/modificar?id_ingreso=2810",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ingreso",
+								"modificar"
+							],
+							"query": [
+								{
+									"key": "id_ingreso",
+									"value": "2810"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
